@@ -30,6 +30,11 @@ resources:
             - task_key: customer_360
           notebook_task:
             notebook_path: ../src/transactions_summary.ipynb
+        - task_key: orders
+          depends_on:
+            - task_key: orders
+          notebook_task:
+            notebook_path: ../src/bakehouse_analytics/orders.dbquery.ipynb    
 
       environments:
         - environment_key: default
