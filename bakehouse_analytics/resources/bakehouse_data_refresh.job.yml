@@ -33,8 +33,10 @@ resources:
         - task_key: orders
           depends_on:
             - task_key: transactions_summary
-          notebook_task:
-            notebook_path: ../src/bakehouse_analytics/orders.dbquery.ipynb    
+          sql_task:
+            query:
+              query_id: d0a1bae1-0781-4881-a7f5-9f8e68befe39
+            warehouse_id: fb3749e6fed9b564
 
       environments:
         - environment_key: default
